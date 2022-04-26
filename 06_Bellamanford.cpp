@@ -1,3 +1,41 @@
+/*
+Bellaman_ford(G, W, S)
+1.initialize
+2.for i = 1 to |G.V| - 1
+3.   for each edge (u, v) belongs to G.E
+4.            Relax(u ,v , w)
+5.// To check negative weightCycle
+6. for each edge (u ,v ) belongs to G.E
+7.    if( v.d > u.d + w(u , v))
+8.            return false
+9.   return true
+
+Relax(u , v , w)
+1.if v.d > u.d + w(u , v)
+2.    v.d = u.d + w(u , v)
+3.    v.pi  = u
+
+Initialize_single_source( G, s)
+1. for each vertex v belongs to V
+2.    v.d = INF
+3.    v.pi = NIL
+4. s.d = 0
+
+print_path(G, s , v , pi)
+1. if v == s
+2.      print s
+3. else if v.pi == NIL
+4.        print "no path from s to v exist"
+5. else {
+6.  print_path(G,s,v,v.pi)
+7.  print v
+8.  }
+
+Time complexity = O(V.E)          
+
+
+
+*/
 #include <bits/stdc++.h>
 using namespace std;
 #define INF 999

@@ -20,15 +20,40 @@ void ComputeLPSarray(string pattern , int m, int *lps){
         }
     }
 }
+
+
+void KMPsearch(string pattern ,string txt){
+    int m = pattern.length();
+    int n = txt.length();
+    int lps[m];
+    ComputeLPSarray(pattern, m , lps);
+    int i = 0, j = 0;
+    while(i < n){
+        if(pattern[j] == txt[i]){
+            j++;
+            i++;
+        }
+        if(j == m){
+            cout << "Pattern found at index "<<(i - j);
+            j = lps[j - 1];
+        }
+        else if(i < n and pattern[j] != txt[i]){
+            if(j != 0){
+                j = lps[j - 1];
+            }else{
+                i++;
+            }
+        }
+    }
+
+}
 int main(){
     string txt , pattern;
     cout <<"Enter the text"<<endl;
-    cin >> txt;
+    getline(cin , txt);
     cout <<"Enter the pattern "<<endl;
-    cin >> pattern;
-    cout <<"Enter a prime number"<<endl;
-    cin >> primeno;
-
+    getline(cin , pattern);
+    KMPsearch(pattern ,txt);
 
 
     return 0;
