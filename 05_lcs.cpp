@@ -30,13 +30,6 @@ int main(){
     cout << "Enter the second string ";
     cin >> y;
     cout << " The resultant string is "<<LCS_Algo(x, y)<< "  and length is "<<LCS_Algo(x,y).length()<<endl;
-
-
-
-
-
-
-
-
+    
     return 0;
 }

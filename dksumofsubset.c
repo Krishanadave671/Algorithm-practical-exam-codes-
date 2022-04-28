@@ -54,7 +54,7 @@ int main(void) {
   scanf("%d",&m);
   printf("Enter no of elements in subset : ");
   scanf("%d",&n);
-  int r=0;
+  int r=0;// total sum of all elements
   for(int i=0;i<n;i++)
   {
     printf("Enter element %d : ",(i+1));
