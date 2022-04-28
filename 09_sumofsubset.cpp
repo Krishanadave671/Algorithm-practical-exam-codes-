@@ -10,10 +10,6 @@ void display(int x[], int k){
     for(int i = 0 ; i <= k ; i++){
         cout <<" "<<x[i]<<" ";
     }
-    
-
-
-
 }
 void sumofsubset(int s , int r, int k){
     cnt += 1;

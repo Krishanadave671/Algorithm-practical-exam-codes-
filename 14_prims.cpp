@@ -34,7 +34,7 @@ int main(){
              if(G[u][i] != 0){
                  int v = i;
                  int weight = G[u][i];
-                 if(MSTset[v] == 0 and weight < key[v]){
+                 if(MSTset[v] == false and weight < key[v]){
                      parent[v] = u;
                      key[v] = weight;
                      pq.push({key[v], v});
